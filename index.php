@@ -72,11 +72,11 @@
                     <ul class="nav" id="top-navigation">
                         <li class="active"><a href="#home">Inico</a></li>
                         <li><a href="#service">Servicios</a></li>
-                        <li><a href="#portfolio">Distribuidores</a></li>
-                        <li><a href="#about">Productos</a></li>
-                        <li><a href="#clients">Clientes</a></li>
+                        <li><a href="#Productos">Productos</a></li>
+                        <li><a href="#Automotrices">Automotrices</a></li>
+                        <li><a href="#clientes">Clientes</a></li>
                         <!--   <li><a href="#price">Price</a></li> -->
-                        <li><a href="#contact">Contacto</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
                     </ul>
                 </div>
                 <!-- End main navigation -->
@@ -173,14 +173,14 @@
     </div>
     <!-- Service section end -->
     <!-- Portfolio section start -->
-    <div class="section secondary-section " id="portfolio">
+    <div class="section secondary-section " id="Productos">
         <div class="triangle"></div>
         <div class="container">
             <div class=" title">
                 <h1>No consigue repuestos de calidad?</h1>
                 <p>Confia su vida en los repuestos que usa?. Nosotros somos fabricantes pero mejoramos a diario cada componente especificamente para cada norma de cada automotriz con calidad igual o superior a la original.</p>
             </div>
-            <h2>Distribuidores Locales</h2>
+            <h2>Productos</h2>
             <ul class="nav nav-pills">
                 <li class="filter" data-filter="all">
                     <a href="#noAction">Todos</a>
@@ -205,7 +205,7 @@
                        $SQL="SELECT `idc`, `Categoria`, `imagen` FROM `t_categorias` ORDER BY `Categoria`  ;";
                         $resultado = mysqli_query($mysqli,  $SQL);
                             while ($fila = mysqli_fetch_assoc($resultado)) {
-                                echo ' <li class="span4 mix '. $fila['idc']. '"><div class="thumbnail">';
+                                echo ' <li class="span4 mix '. $fila['idc']. '" onclick="Listados('.$fila['idc'].')"><div class="thumbnail">';
                                 echo '<img src="'.substr ($fila['imagen'],6) . '" alt="'. $fila['Categoria']. ' " class="catIma" >';
                                 echo ' <a href="#single-project" class="more show_hide" rel="#slidingDiv" onclick="FCli('. $fila['idc']. ')"> <i class="icon-plus"><h5><br>(Click para ver más)</h5></i></a>';
                                 echo '<h3>'. $fila['Categoria']. '</h3> <div class="mask"></div></div></li>';
@@ -218,7 +218,7 @@
     </div>
     <!-- Portfolio section end -->
     <!-- About us section start -->
-    <div class="section primary-section" id="about">
+    <div class="section primary-section" id="Automotrices">
         <div class="triangle"></div>
         <div class="container">
             <div class="title1" style="text-align:center;">
@@ -272,8 +272,7 @@
 
 
     <!-- Contact section start -->
-    <div id="contact" class="contact">
-
+    <div id="contacto" class="contact">
 
         <div class="section secondary-section">
             <div class="container">
@@ -383,7 +382,11 @@
             <script src="js/respond.min.js"></script>
         <![endif]-->
     <script type="text/javascript" src="js/app.js"></script>
-
+    <script>
+        function Listados(ID) {
+            location.href ="Listado.php=?I="+ID;
+        }
+    </script>
     <script>
         function FCli(id) {
             $("#single-project").load("hom.php?A="+id, function (res){ });//
