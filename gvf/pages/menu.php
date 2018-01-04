@@ -58,6 +58,7 @@
                        <li><a class="dropdown-toggle" data-toggle="dropdown" href="#" > ABM <i class="fa fa-caret-down"></i></a>
                            <ul class="dropdown-menu dropdown-messages">
                                  <li><a href="ABMCategorias.php">Categorias y Sub </a></li>
+                                  <li><a href="ABMCampos.php">Campos por categorias</a></li>
                                  <li>------------------------------</li>
                                  <li><a href="ABMZonas.php"> Zonas </a></li>
                                  <li><a href="Clientes.php"> Clientes </a></li>
