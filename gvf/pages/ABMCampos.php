@@ -23,7 +23,8 @@
     <!-- ****************************************************************************************************** -->
     <!-- ****************************************************************************************************** -->
     <style>
-        body{background: #b2b2b2; }
+        body{background: #00a5dd; }
+
         table.paleBlueRows {
             font-family: "Times New Roman", Times, serif;
             border: 1px solid #FFFFFF;
@@ -72,9 +73,19 @@
         #BTSub a{
             float: right;
         }
-        #SubCaegorias{
+        #Cextra{
             width: 70%;
             min-width: 380px;
+        }
+        .dista{
+            margin: 10px 35px;
+            padding: 10px 30px;
+        }
+        .fondos{
+            background: #a8b5cf;
+            border-radius: 20px;
+            padding: 25px;
+            margin: 10px;"
         }
         input:hover{background: greenyellow}
         #Categorias{display: block;width: 100%; padding-right: 1em; padding-left: 1em; }
@@ -89,23 +100,14 @@
     <div class="row">
         <div id="contenido">
    <!-- **********************************************************************************************************-->
-            <h3 style="text-decoration: underline;margin-left: 50px; "> Categorias y subcategorias :</h3>
+            <h2 style="padding-left: 50px;">Alta de campos extras</h2>
   <!-- *********************************************************************************************************** -->
             <div class="col-lg-6">
-                <div style="padding-top: 1em;text-align: center; padding-bottom: 10px;">
-                    <div style=" display: flex">
-                        <div style="width: 150px;overflow: hidden;">
-                            <img src="../../WebMaq/NoImagen.png" alt="No hay Imagen" id="eImg" style="width: 130px;height: 130px;padding: 1em;">
-                            <input type="file" id="Carga_Imagen" name="Carga_Imagen" accept="image/*" value="../../WebMaq/NoImagen.png"><br>
-                        </div>
-
-                        <div style="width: 100%;padding-top: 30px;">
-                            <input type="text" id="Categorias" >
-                            <a id="ACategorias" class="btn btn-primary">Agregar </a><a class="btn btn-success" onclick="Limpiar1()">Nuevo </a>
-                            <h5 id="IDC" style="display: none;">0</h5>
-                        </div>
-                    </div>
-                </div>
+                <h4 class="fondos"  >Categoria actual:
+                    <span id="IDC" class="NV"></span>
+                    <br>
+                    <span id="dCategoria" style="color:darkred; text-align: right;padding-left: 2em;"></span>
+                </h4>
 
                 <table id="TCategorias" class="paleBlueRows">
                     <thead>
@@ -118,20 +120,21 @@
             </div>
    <!-- ******************************************************************************************************* **  -->
             <div class="col-lg-6">
-                <h4>Categoria actual: <br>   <span id="dCategoria" style="color:darkred; text-align: right;padding-left: 2em;"></span> </h4>
-                <div style="padding-top: 1em;text-align: center; padding-bottom: 1em;">
-
-                    <input type="text" id="SubCaegorias" >
-                    <a id="ASub" class="btn btn-primary">Agregar </a><a class="btn btn-success" onclick="Limpiar2()">Nuevo </a>
+               <div style="text-align: center; padding-bottom: 1em;">
+                <h4 class="fondos">
+                    <label for="Cextra">Campo:</label>
+                    <input type="text" id="Cextra" ><br>
+                    <a id="ASub" class="btn btn-primary dista">Agregar </a><a class="btn btn-success dista" onclick="Limpiar2()">Nuevo </a>
+                </h4>
                     <h5 id="IDS" style="display: none;">0</h5>
                 </div>
 
                 <table id="TSub" class="paleBlueRows"  >
                     <thead>
-                    <tr style="background: #fe672e;"> <th>SubCategorias</th> </tr>
+                    <tr style="background: #fe672e;"> <th>Campos Extras</th> </tr>
                     </thead>
                     <tbody id="BTSub">
-                    <tr><td>SubCategoria  <a class="btn"> Eliminar</a></td></tr>
+                    <tr><td><a class="btn"></a></td></tr>
                     </tbody>
                 </table>
             </div>
@@ -159,13 +162,13 @@
 <!-- ***********************************************************************************  -->
 
 <script>
-    function CSub(id) {
+    function CCE(id) {
         Limpiar2();
-        let d={T:53,ID:id};
-        $.post("cgi/CWeb.php", d, function(result) {
+        let d={M:13,ID:id};
+        $.post("cgi/Grabar.php", d, function(result) {
             let Datos = result.split("|");
             document.getElementById('IDS').innerText=Datos[0];
-            document.getElementById('SubCaegorias').value=Datos[1];
+            document.getElementById('Cextra').value=Datos[2];
         });
     }
 
@@ -176,7 +179,7 @@
         for(let y=0;y < X.length; y++ ) {
             X[y].addEventListener("click", function (e) {
                 e.preventDefault();
-                CSub(this.getAttribute('data-id'));
+                CCE(this.getAttribute('data-id'));
             });
 
             B[y].addEventListener("click", function (e) {
@@ -193,13 +196,13 @@
     function BSub(id){
         let d={T:51,M:1,ID:id};
         $.post("cgi/CWeb.php", d, function(result) {
-            CargatSub();
+            CargatCE();
         });
     }
 
-    function CargatSub(){
+    function CargatCE(){
         let c=parseInt(document.getElementById('IDC').innerHTML);
-        $("#BTSub").load("cgi/tweb.php?T=21&C="+c, function (res) {
+        $("#BTSub").load("cgi/tweb.php?T=23&C="+c, function (res) {
             MTediSub();
         });//
     }
@@ -210,9 +213,9 @@
             let d;
             let CAT =parseInt( document.getElementById('IDC').innerText);
             let Id = document.getElementById('IDS').innerText;
-            let SubCaegorias = document.getElementById('SubCaegorias').value.trim();
+            let Cextra = document.getElementById('Cextra').value.trim();
 
-            if (SubCaegorias.length < 2) {
+            if (Cextra.length < 2) {
                 alert("Falta SubCaegoria");
                 return;
             }
@@ -221,9 +224,9 @@
                 return;
             }
 
-            d = {T: 52, Titulo: SubCaegorias, ID: Id, ID2:CAT};
-            $.post("cgi/CWeb.php", d, function (result) {
-                CargatSub();
+            d = {M: 11, Campo: Cextra, ID: Id, idc:CAT};
+            $.post("cgi/Grabar.php", d, function (result) {
+                CargatCE();
                 Limpiar2();
             });
         });
@@ -231,49 +234,19 @@
 </script>
 
 <script>
-    function uploadAjax(F,C) {
-        let inputFileImage = document.getElementById(F);
-        let file = inputFileImage.files[0];
-        var data = new FormData();
-        data.append('archivo', file);
-        let url = "upload.php?c="+ C ;
-        $.ajax({
-            url: url,
-            type: 'POST',
-            contentType: false,
-            data: data,
-            processData: false,
-            cache: false
-        }).done(function(data){
-            //alert(data.msg);
-            console.log(data.msg);
-            document.getElementById('eImg').setAttribute("src",data.msg);
-
-        });
-    }
-
-    function FileAjax(F,C) {
-        const a= document.getElementById(F).addEventListener("change",function () {
-            uploadAjax(F,C);
-        });
-    }
-</script>
-
-<script>
     function CRub(id) {
-        Limpiar1();
-        let d={T:7,ID:id};
+
+        let d={T:71,ID:id};
         $.post("cgi/CWeb.php", d, function(result) {
 
             let Datos = result.split("|");
             document.getElementById('IDC').innerText=Datos[0];
-            document.getElementById('Categorias').value=Datos[1];
             document.getElementById('dCategoria').innerHTML=Datos[1];
-            document.getElementById('eImg').setAttribute("src",Datos[2]);
 
-            CargatSub();
+            CargatCE();
         });
     }
+
     function BRubro(id){
         let d={T:5,M:1,ID:id};
         $.post("cgi/CWeb.php", d, function(result) {
@@ -282,64 +255,28 @@
     }
     function MTeditor() {
         let X= document.querySelectorAll('#BTCategorias tr');
-        let B= document.querySelectorAll('#BTCategorias .borra2');
-
         for(let y=0;y < X.length; y++ ) {
             X[y].addEventListener("click", function (e) {
                 e.preventDefault();
                 CRub(this.getAttribute('data-id'));
             });
-
-            B[y].addEventListener("click", function (e) {
-                e.preventDefault();
-                e.cancelBubble = true;
-                if (e.stopPropagation) e.stopPropagation();
-                if(confirm("Seguro que quiere borrar la Categoria?")){
-                    BRubro( B[y].parentNode.parentNode.getAttribute('data-id'));
-                }
-            });
         }
     }
-    function Limpiar1(){
-        document.getElementById('Categorias').value="";
-        document.getElementById('IDC').innerHTML="";
-        document.getElementById('eImg').setAttribute('src','../../WebMaq/NoImagen.png');
-    }
-    function Limpiar2(){
-        document.getElementById('SubCaegorias').value="";
-        document.getElementById('IDS').innerHTML="";
 
+    function Limpiar2(){
+        document.getElementById('Cextra').value="";
+        document.getElementById('IDS').innerHTML="";
     }
+
     function CargatRub(){
-        $("#BTCategorias").load("cgi/tweb.php?T=2", function (res) {
+        $("#BTCategorias").load("cgi/tweb.php?T=22", function (res) {
             MTeditor();
         });//
     }
-    function GrabarR() {
-        document.getElementById('ACategorias').addEventListener("click",function (e) {
-            e.preventDefault();
-            let d;
-            let Id = document.getElementById('IDC').innerText;
-            let Categorias = document.getElementById('Categorias').value.trim();
-            let ima = document.getElementById('eImg').getAttribute("src");
-
-            if (Categorias.length < 2) {
-                alert("Falta Categoria");
-                return;
-            }
-            d = {T: 6, Titulo: Categorias, ID: Id, imagen:ima};
-            $.post("cgi/CWeb.php", d, function (result) {
-                location.reload();
-            });
-        });
-    }
-
-
 
     (function () {
-        FileAjax("Carga_Imagen",1);
+
         CargatRub();
-        GrabarR();
         GrabarS()
     } )();
 </script>

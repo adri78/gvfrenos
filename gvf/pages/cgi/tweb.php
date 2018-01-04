@@ -8,6 +8,7 @@ include_once ('bd3.php');
 
 $modo="";
 $Total=0;
+$C=0;
 $x=0;
 
 if(isset($_GET["T"])){ $modo=$_GET["T"]; }
@@ -51,7 +52,45 @@ if ($modo==21) { // Tabla SubCategoria
 	echo $tabla;
 }
 
+if ($modo==22) { // Tabla Categoria
+    $sql = "SELECT `idc`, `Categoria` FROM `t_Categorias` ORDER BY `Categoria` ASC";
+    $segmento = mysqli_query($mysqli, $sql );
+    $tabla = "";
+    while ( $row = mysqli_fetch_array( $segmento ) ) {
+        $tabla = $tabla . '<tr data-id="' . $row["idc"]. '"><td> ' . $row["Categoria"] . '</td></tr>';
+    }
+    echo $tabla;
+}
+if ($modo==23) { // Tabla Campos Extras
+    $sql = "SELECT `idCe`, `catIs`, `CampoE` FROM `t_camposext` WHERE `catIs`='".$C."' ORDER BY `CampoE` ASC";
+    $segmento = mysqli_query($mysqli, $sql );
+    $tabla = "";
+    while ( $row = mysqli_fetch_array( $segmento ) ) {
+        $tabla = $tabla . '<tr data-id="' . $row["idCe"]. '"><td>' . $row["CampoE"] . '<a
+                                class="btn btn-danger borra2">Borrar</a> </td></tr>';
+    }
+    echo $tabla;
+}
 
+if ($modo==24) { // ver Lista cartegorias
+    $sql = "SELECT `idc`, `Categoria` FROM `t_categorias` ;";
+    $tmp="<option value=''> Todos </option>";
+    $segmento = mysqli_query($mysqli, $sql);
+    while ($row = mysqli_fetch_array($segmento)) {
+        $tmp= $tmp."<option value='".$row['idc']."'>".$row['Categoria']."</option>";
+    }
+    print $tmp;
+}
+
+if ($modo==25) { // ver Lista cartegorias
+        $sql = "SELECT `idsc`, `SubCategoria`, `cid` FROM `t_subCate` WHERE `cid`='".$C."';";
+        $tmp="<option value=''> Todos </option>";
+        $segmento = mysqli_query($mysqli, $sql);
+        while ($row = mysqli_fetch_array($segmento)) {
+            $tmp= $tmp."<option value='".$row['idsc']."'>".$row['SubCategoria']."</option>";
+        }
+    print $tmp;
+}
 
 if ($modo==3) { // Tabla marca
 	$sql = "SELECT `idMarca`, `Marca`, `Logo` FROM `t_marca`ORDER BY `Marca` ASC";

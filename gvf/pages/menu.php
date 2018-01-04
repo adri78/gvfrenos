@@ -60,6 +60,9 @@
                                  <li><a href="ABMCategorias.php">Categorias y Sub </a></li>
                                   <li><a href="ABMCampos.php">Campos por categorias</a></li>
                                  <li>------------------------------</li>
+                                  <li><a href="ABMListas.php">Listas</a></li>
+                                  <li><a href="ABMArticulo.php">Articulos</a></li>
+                                 <li>------------------------------</li>
                                  <li><a href="ABMZonas.php"> Zonas </a></li>
                                  <li><a href="Clientes.php"> Clientes </a></li>
                            </ul>

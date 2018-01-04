@@ -102,6 +102,19 @@ if ($Modo==7) { // ver articulo X Codigo
 		print "$ID|$Categoria|$imagen";
 	}
 }
+
+if ($Modo==71) { // ver articulo X Codigo sin imagen
+    $sql = "SELECT `idc`, `Categoria` FROM `t_Categorias` WHERE `idc`='" . $ID . "';";
+
+    $segmento = mysqli_query($mysqli, $sql);
+    while ($row = mysqli_fetch_array($segmento)) {
+        $ID = $row['idc'];
+        $Categoria = $row['Categoria'];
+        print "$ID|$Categoria";
+    }
+}
+
+//
 // ************************************  Fin  Categorias *** ***********************  //
 
 // ************************************  ABM Marcas *** ***********************  //
@@ -164,12 +177,6 @@ if ($Modo==15) { // ver Zonas
 // ************************************  Fin Zonas *** ***********************  //
 
 
-
-
-
-
-
-
 if ($Modo==100) { // Marcas OPTION
     $sql = "SELECT `idMarca`, `Marca` FROM `t_marca` ORDER BY `Marca`;";
     $segmento = mysqli_query($mysqli, $sql);
@@ -210,7 +217,6 @@ if ($Modo==52) { // ver articulo Alta
 
 if ($Modo==53) { // ver articulo X Codigo
 	$sql = "SELECT `idsc`, `SubCategoria`, `cid` FROM `t_subCate` WHERE `idsc`='" . $ID . "';";
-
 	$segmento = mysqli_query($mysqli, $sql);
 	while ($row = mysqli_fetch_array($segmento)) {
 		$ID = $row['idsc'];

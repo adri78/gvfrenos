@@ -29,6 +29,10 @@ if(isset($_POST["FZona"])){ $FZona=$_POST["FZona"]; }
 if(isset($_POST["Email"])){ $Email=$_POST["Email"]; }
 if(isset($_POST["Lista"])){ $Lista=$_POST["Lista"]; }
 
+if(isset($_POST["Campo"])){ $Campo=strtoupper ( trim ( $_POST["Campo"])); }
+if(isset($_POST["idc"])){ $idc=$_POST["idc"]; }
+
+
 /*if(isset($_POST["S1"])){ $S1=$_POST["S1"]; }
 if(isset($_POST["S2"])){ $S2=$_POST["S2"]; }
 if(isset($_POST["S3"])){ $S3=$_POST["S3"]; }
@@ -36,7 +40,7 @@ if(isset($_POST["Cat"])){ $Cat=$_POST["Cat"]; }*/
 
 // $M  $NComercial  $FDire   $ID  $Tel  $FZona  $Cliente  $Obs   $Email  $Lista $User $Pass
 $sql="";
-
+ /**********************************************  Clientes ***************************************/
 if ($M==1){  //Alta
     if($ID >0){
         $sql="UPDATE `t_cliente` SET `Cliente`='".$Cliente."',`Domicilio`='".$FDire."',`Email`='".$Email."',`Tel`='".$Tel ;
@@ -65,3 +69,37 @@ if ($M==3){ // mostrar x id
         print $row["idCli"]."|".$row["Cliente"]."|".$row["Domicilio"]."|".$row["Email"]."|".$row["Tel"]."|".$row["ZonaId"]."|".$row["NComercial"]."|".$row["ListaId"]."|".$row["user"] ;
     }
 }// mostrar x id
+/********************************************** Fin Clientes ***************************************/
+
+/********************************************  Campos Extras *********************************************** */
+if ($M==11){  //Alta
+    if($ID >0){
+        $sql="UPDATE `t_camposext` SET `catIs`='".$idc."',`CampoE`='".$Campo."' WHERE `idCe`=".$ID.";" ;
+    }else{
+        $sql="INSERT INTO `t_camposext`( `catIs`, `CampoE`) VALUES ('".$idc."','".$Campo."')" ;
+    }
+    echo $sql;
+    $segmento = mysqli_query($mysqli,$sql);
+} //Alta
+
+
+if ($M==12) { // borrar
+    $sql="DELETE FROM `t_camposext` WHERE `idCe`=".$ID;
+    $segmento = mysqli_query($mysqli,$sql);
+}// borrar
+
+if ($M==13){ // mostrar x id
+    $sql="SELECT `idCe`, `catIs`, `CampoE` FROM `t_camposext` WHERE `idCe`=".$ID;
+    $segmento = mysqli_query($mysqli,$sql);
+    while ( $row = mysqli_fetch_array( $segmento ) ) {
+        print $row["idCe"]."|".$row["catIs"]."|".$row["CampoE"] ;
+    }
+}// mostrar x id
+
+if ($M==14){ // mostrar x id de Categoria
+    $sql="SELECT `idCe`, `catIs`, `CampoE` FROM `t_camposext` WHERE `catIs`=".$ID;
+    $segmento = mysqli_query($mysqli,$sql);
+    while ( $row = mysqli_fetch_array( $segmento ) ) {
+        print $row["idCe"]."|".$row["catIs"]."|".$row["CampoE"] ;
+    }
+}// mostrar x id de Categoria
