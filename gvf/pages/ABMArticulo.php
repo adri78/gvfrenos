@@ -21,13 +21,25 @@
     <![endif]-->
     <!-- ****************************************************************************************************** -->
 <style>
-    ListArt tr:hover{background:aqua;}
+    #ListArt td{
+        padding: 2px ;
+    }
+
+    #ListArt tr:hover{background:aqua;}
+    td:nth-child(1) { text-align: right; width: 100px; padding-right: 15px !important;}
     td:nth-child(4) { text-align:center;}
-    td:nth-child(1) { text-align: right;}
-    td:nth-child(3) { text-align: right; }
+
+    td:nth-child(3) { text-align: right; background: darkseagreen; }
     th:nth-child(4) { text-align:center;}
     th:nth-child(1) { text-align: right;}
-    th:nth-child(3) { text-align: right; }
+
+     #Ttmp{
+        max-height: 90vh;
+        overflow: scroll;
+        display: table !important;
+    }
+  /*  th:nth-child(3) { text-align: right; }*/
+
 </style>
 </head>
 <body>
@@ -37,55 +49,48 @@
     <div class="row">
 
         <div class="col-lg-6">
+
             <div class="form-group input-group" style="padding-left: 2em;">
-                <p class="input-group-addon " ><i class="fa fa-edit" style="margin:0px;"></i></p>
+                <p class="input-group-addon"><i class="fa fa-edit" style="margin:0px;"></i></p>
                 <input type="text" class="form-control" placeholder="Codigo / Articulo" id="Bus">
-
             </div>
-
+            <br>
+            <div style="margin-top:-10px;">
+                 <div class="col-md-6">
+                      <select name="otros" class="form-control" id="otros">
+                                <option value=""> -- </option>
+                      </select>
+                 </div>
+                 <div class="col-md-6">
+                       <input type="text" id="BusOtros" class="form-control">
+                 </div>
+            </div>
         </div>
-        <div class="col-lg-11">
-            <div class="col-lg-3">
+        <div class="col-lg-6">
+            <div class="col-lg-6">
                 <label for="Cat">Categoria</label>
                 <select name="Cat" id="Cat" class="form-control">
                     <option value=""> Todos</option>
                 </select>
+                <br>
+                <a class="btn btn-info btn-block" > Nuevo </a>
+
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-6">
                 <label for="Cat">SubCate</label>
                 <select name="SCat" id="SCat" class="form-control">
                     <option value=""> Todos</option>
                 </select>
+                <h4 style="text-align: center" > 0/ <span id="tarticulos"> 0</span> </h4>
             </div>
+        </div>
+        <div class="col-lg-12">
 
-
-
-
-            <table class="table  " id="Ttmp" style=" margin: 4em 3em 1em 1em;">
+            <table class="table sortable" id="Ttmp" style=" margin:1em;">
                 <thead  class="Titulo" style=" background: black; color:snow;">
-                <tr><th>Codigo</th><th>Articulo</th><th>Precio</th><th>Fecha</th></tr></thead>
+                    <tr><th>Codigo</th><th>Articulo</th><th>Precio</th><th>Categoria</th><th>Sub</th><th>Otros</th><th></th></tr>
+                </thead>
                 <tbody id="ListArt">
-                <?php
-                /*    include 'cgi/config2.inc';
-
-                $formatter = new NumberFormatter('en_US', NumberFormatter::CURRENCY);
-                $sql="SELECT `IdV`, `Fecha`, `Cliente` , `Total`, `Control`, `Local`, `Num` FROM `t_venta` WHERE `Local`=".$_SESSION['Local1'] ." ORDER BY `IdV` DESC LIMIT 10;";
-                $segmento = mysqli_query($conexion,$sql);
-                while ($row = mysqli_fetch_array($segmento)) {
-                    echo '<tr data-id="'.$row["IdV"].'">';
-                    $recibo=str_pad($row["Num"], 6, "0", STR_PAD_LEFT);
-                    echo '<td>'.$recibo.'</td>';
-                    echo '<td>'.$row["Cliente"].'</td>';
-                    $Total=$formatter->formatCurrency( $row["Total"], 'USD');
-                    echo '<td>'.$Total.'</td>';
-                    $Fecha=  $row["Fecha"]  ;
-                    echo '<td>'.$Fecha.'</td>';
-                    echo '</tr>';
-                }
-*/
-                ?>
-
-
                 </tbody>
             </table>
 
@@ -103,6 +108,7 @@
     <!-- Metis Menu Plugin JavaScript -->
     <script src="../vendor/metisMenu/metisMenu.min.js"></script>
     <script src="../js/comun.js"></script>
+    <script src="../js/sorttable.js"></script>
     <script src="../dist/js/sb-admin-2.js?1"></script>
 <script>
     function CargaCat() {
@@ -114,27 +120,49 @@
         });
     }
 
-    function mostrar(){
-        $("#Tabla").load("cgi/tabla.php?T=10&L="+Local+"&D=" + document.getElementById("Bus").value, function (res) {console.log(res);});
+    function CargarTabla(){
+        document.getElementById('Ttmp').style.display="none";
+        $("#ListArt").load("cgi/tweb.php?T=100", function (res) {
+            document.getElementById('Ttmp').style.display="block";
+            document.getElementById("tarticulos").innerHTML= document.getElementById("ListArt").rows.length;
+        });
     }
     $(document).ready(function() {
         CargaCat();
-
+        CargarTabla();
         $("input[type=text]").focus(function(){
             this.select();
         });
         $("#Bus").keydown(function(e){
             if (e.keyCode==13){
                 e.preventDefault();
-                mostrar();
+
                 return false;
             }
         });
     });
 
-
-
 </script>
+<script>
+    jQuery.extend(jQuery.expr[":"],
+        {
+            "contiene-palabra": function (elem, i, match, array) {
+                return (elem.textContent || elem.innerText || jQuery(elem).text() || "").toLowerCase().indexOf((match[3] || "").toLowerCase()) >= 0;
+            }
+        });
 
+    $("#Bus").keyup(function () {/* ******************    Motor del Buscador      ******************************************** */
+
+       if (jQuery(this).val() != "") {
+          console.log("filtrando");
+          jQuery("#Ttmp tbody>tr").hide();
+          jQuery("#Ttmp td:contiene-palabra('" + jQuery(this).val() + "')").parent("tr").show();
+
+      }
+      else {
+          jQuery("#Ttmp tbody>tr").show();
+      }
+  });
+</script>
 </body>
 </html>

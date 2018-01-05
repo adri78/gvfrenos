@@ -139,5 +139,22 @@ if ($modo==6) { // Tabla Clientes
 	echo $tabla;
 }
 
+
+/************************************************* Listado General tipo 1 ***********************************************/
+if ($modo==100) { // Tabla Clientes
+    $sql = "SELECT `idA`,`cat`, `SC` , `Codigo`, `Art`, `Precio`, (SELECT `Categoria`  FROM `t_categorias` WHERE `idc`=`cat`) as Categoria, (SELECT `SubCategoria` FROM `t_subcate` WHERE `idsc`=`SC`) as SubCat, `imagen` FROM `tarticulo` ORDER BY `cat`,`SC`, `Art`  ";
+    $segmento = mysqli_query($mysqli, $sql );
+    $tabla = "";
+    while ( $row = mysqli_fetch_array( $segmento ) ) {
+        $tabla = $tabla . '<tr data-id="'. $row["idA"].'" data-C="'.$row["cat"].'" data-SC="'.$row["SC"].'" ><td>'.$row["Codigo"] .'</td><td>'.$row["Art"] .'</td><td>'.$row["Precio"].'</td><td>'.$row["Categoria"] .'</td><td>'.$row["SubCat"] .'</td>';
+        $tabla = $tabla . '<td><a class="btn-danger borra2">Borrar </a> </td></tr>';
+    }
+    echo $tabla;
+}
+
+/*************************************************** Fin Listado tipo 1 *************************************************/
+
+
+
 mysqli_close($mysqli);
 ?>

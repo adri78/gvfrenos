@@ -73,26 +73,24 @@ function pulsar(e) {
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js?1"></script>
    <script>
+        jQuery.extend(jQuery.expr[":"],
+            {
+                "contiene-palabra": function (elem, i, match, array) {
+                    return (elem.textContent || elem.innerText || jQuery(elem).text() || "").toLowerCase().indexOf((match[3] || "").toLowerCase()) >= 0;
+                }
+            });
 
-<script>
-    jQuery.extend(jQuery.expr[":"],
-        {
-            "contiene-palabra": function (elem, i, match, array) {
-                return (elem.textContent || elem.innerText || jQuery(elem).text() || "").toLowerCase().indexOf((match[3] || "").toLowerCase()) >= 0;
+        $("#Buscar").keyup(function () {/* ******************    Motor del Buscador      ******************************************** */
+            if (jQuery(this).val() != "") {
+                jQuery("#LART tbody>tr").hide();
+                jQuery("#LART td:contiene-palabra('" + jQuery(this).val() + "')").parent("tr").show();
+            }
+            else {
+                jQuery("#LART tbody>tr").show();
             }
         });
 
-    $("#Buscar").keyup(function () {/* ******************    Motor del Buscador      ******************************************** */
-        if (jQuery(this).val() != "") {
-            jQuery("#LART tbody>tr").hide();
-            jQuery("#LART td:contiene-palabra('" + jQuery(this).val() + "')").parent("tr").show();
-        }
-        else {
-            jQuery("#LART tbody>tr").show();
-        }
-    });
 
-
-</script>
+    </script>
 </body>
 </html>

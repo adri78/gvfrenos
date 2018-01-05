@@ -379,7 +379,7 @@
   -->
     <!-- css3-mediaqueries.js for IE8 or older -->
     <!--[if lt IE 9]>
-            <script src="js/respond.min.js"></script>
+    <script src="js/respond.min.js"></script>
         <![endif]-->
     <script type="text/javascript" src="js/app.js"></script>
     <script>
