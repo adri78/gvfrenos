@@ -23,6 +23,15 @@
     <![endif]-->
     <!-- ****************************************************************************************************** -->
     <!-- ****************************************************************************************************** -->
+    <style>
+        .marco{
+            border: 2px solid black;
+        }
+    </style>
+
+
+
+
 <script>                
 /********************************************* */
 function pulsar(e) {  
@@ -44,7 +53,9 @@ function pulsar(e) {
     include 'menu.php';
 ?> 
     <div class="row">
+  <div class="marco">
 
+  </div>
         <div class="col-lg-4 cuadro">
 
         </div>
@@ -56,19 +67,16 @@ function pulsar(e) {
     </div>
     <!-- fin row -->
 
-<?php include 'cgi/Pedir.php'; ?>
+
 
     <!-- /#wrapper -->
     <!-- jQuery -->
     <script src="../vendor/jquery/jquery.min.js"></script>
     <script src="../vendor/jquery/jquery-ui.js"></script>
     <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
-    <!-- Metis Menu Plugin JavaScript -->
     <script src="../vendor/metisMenu/metisMenu.min.js"></script>
     <script src="../js/comun.js"></script>
-    <!-- DataTables JavaScript -->
     <script type="text/javascript"  src="../js/sorttable.js"></script>
-
     <script src="../dist/js/sb-admin-2.js?1"></script>
 
 
