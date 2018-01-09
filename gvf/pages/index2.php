@@ -53,6 +53,18 @@
         tbody tr:hover{
             background: #449d44 !important;
         }
+        #TListas{
+            background: #bcbcbc;
+            width: 100%;
+        }
+        .LArt  td:nth-child(1){
+            text-align: center;
+
+        }
+        .LArt  td:nth-child(3){
+            text-align: right;
+            margin-right: 10px;
+        }
     </style>
 
 
@@ -187,7 +199,7 @@ function pulsar(e) {
         </div><br>
         <div class="form-group input-group" >
             <p class="input-group-addon"><i class="fa fa-edit" style="margin:0px;"></i></p>
-            <input type="text" class="form-control" placeholder="Codigo / Articulo" id="Bus">
+            <input type="text" class="form-control" placeholder="Codigo / Articulo" id="Bus" onkeyup="BuscaGene()">
         </div>
     </div>
     <div class="col-md-6">
@@ -196,18 +208,27 @@ function pulsar(e) {
               <select name="FSCat" id="FSCat" class="form-control">
                   <option value=""> Todos</option>
               </select>
-          </div><br>
+          </div>
+
+        <br>
+    </div>
+   <div class="col-md-6">
         <div  class="form-group input-group" style="width: 100%;">
             <div class="col-xs-6">
                 <select name="otros" class="form-control" id="otros">
                     <option value=""> -- </option>
                 </select>
             </div>
-            <div class="col-xs-6">
+            <div class="col-xs-4">
                 <input type="text" id="BusOtros" class="form-control">
+
+            </div>
+            <div class="col-xs-2">
+                <a class="btn btn-success btn-lg">Nuevo</a>
+
             </div>
         </div>
-     </div>
+   </div>
         <!-- *********************************************************************** -->
 
 
@@ -235,32 +256,113 @@ function pulsar(e) {
     <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
     <script src="../vendor/metisMenu/metisMenu.min.js"></script>
     <script src="../js/comun.js"></script>
-    <script type="text/javascript"  src="../js/sorttable.js"></script>
+    <script type="text/javascript"  src="../js/jquery.tablesorter.js"></script>
     <script src="../dist/js/sb-admin-2.js?1"></script>
 
-<script>  '------  Script de articulos ------------ '
+<script>
+    function OcultaTablas() {
+        let x= document.querySelectorAll(".LArt");
+        for (i=0;i < x.length ; i++){
+            x[i].style.display="none";
+        }
+    }
+
+
+
+    '------  Script de articulos ------------ '
     function CargaCat() {
         $("#Cat").load("cgi/tweb.php?T=24", function (res){
             document.getElementById('FCat').innerHTML=res;
             document.getElementById("Cat").addEventListener("change", function() {
                 let c=document.getElementById('Cat').value;
                 $("#SCat").load("cgi/tweb.php?T=25&C=" +c , function (res){});
-            });
-            document.getElementById("FCat").addEventListener("change", function() {
-                $("#FSCat").load("cgi/tweb.php?T=25&C=" + document.getElementById('Cat').value, function (res){
-                });
+
             });
         });
+        document.getElementById("FCat").addEventListener("change", function() {
+                OcultaTablas();
+                $("#FSCat").load("cgi/tweb.php?T=25&C=" + document.getElementById('FCat').value, function (res){
+                });
+                $("#otros").load("cgi/tweb.php?T=7&C=" + document.getElementById('FCat').value , function (res){
+                    document.getElementById('BusOtros').value="";
+                });
+             let c=document.getElementById('FCat').value;
+             let cla="#LA"+ c ;
+             let cla2='TT'+c;
+             let cla3='#TT'+c;
+             $(cla).load("cgi/tweb.php?T=102&C=" +c , function (e) {
+                 document.getElementById(cla2).style.display="table";
+                 $(cla3).tableSorter();
+            });
+        });
+
+        document.getElementById('FSCat').addEventListener("change", function() { SubFiltro();});
     }
 
 <!-- iniciar -->
     (function () {
 
-        $("#TListas").load("cgi/tweb.php?T=101", function (e) {});
+        $("#TListas").load("cgi/tweb.php?T=101", function (e) {
+            OcultaTablas();
+
+        });
         CargaCat();
         document.getElementById('eImg').addEventListener("dblclick",function (ev) {  document.getElementById('Carga_Imagen').click()}  )
     })();
 </script>
+<script>
+    function PreFiltro() {
+        let c=document.getElementById('FCat').value;
+        let Tc='TT'+c;
+        tr = document.getElementById(Tc).getElementsByTagName("tr");
+        for (let i = 0; i < tr.length; i++) {
+            tr[i].style.display = "";
+        }
+        SubFiltro();
+    }
 
+
+    function BuscaGene() {
+
+        // Declare variables
+        var Bus, c , table, tr, td,td2, i,Tc;
+        Bus = document.getElementById("Bus").value.toUpperCase();
+        if (Bus.length >2){
+            c=document.getElementById('FCat').value;
+            Tc='TT'+c;
+            table = document.getElementById(Tc);
+            tr = table.getElementsByTagName("tr");
+
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                td2 = tr[i].getElementsByTagName("td")[1];
+                if (td) {
+                    if ((td.innerHTML.toUpperCase().indexOf(Bus) > -1) ||(td2.innerHTML.toUpperCase().indexOf(Bus) > -1)) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+       if (Bus.length < 2 ){PreFiltro()}
+    }
+
+
+
+    function SubFiltro() {
+        let c=document.getElementById('FCat').value;
+        let cs=document.getElementById('FSCat').value;
+        let Tc='TT'+c;
+        tr = document.getElementById(Tc).getElementsByTagName("tr");
+        for (let i = 1; i < tr.length; i++) {
+           if (( tr[i].getAttribute("data-sc") == cs)||( cs == "" )){
+               tr[i].style.display = "";
+           }else{
+               tr[i].style.display = "none";
+           }
+        }
+    }
+</script>
 </body>
 </html>

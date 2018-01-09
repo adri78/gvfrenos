@@ -91,8 +91,8 @@
       <file leaf-file-name="ABMArticulo.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gvf/pages/ABMArticulo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="90" column="119" lean-forward="false" selection-start-line="90" selection-start-column="20" selection-end-line="90" selection-end-column="129" />
+            <state relative-caret-position="190">
+              <caret line="110" column="2" lean-forward="true" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -101,45 +101,9 @@
       <file leaf-file-name="index2.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gvf/pages/index2.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="246" column="78" lean-forward="true" selection-start-line="246" selection-start-column="78" selection-end-line="246" selection-end-column="78" />
-              <folding>
-                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CWeb.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gvf/pages/cgi/CWeb.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="91" column="15" lean-forward="true" selection-start-line="90" selection-start-column="43" selection-end-line="91" selection-end-column="15" />
-              <folding>
-                <element signature="e#1285#1424#0#PHP" expanded="false" />
-                <element signature="e#1445#2003#0#PHP" expanded="false" />
-                <element signature="e#2019#2500#0#PHP" expanded="false" />
-                <element signature="e#2673#2821#0#PHP" expanded="false" />
-                <element signature="e#5070#5213#0#PHP" expanded="false" />
-                <element signature="e#5215#5501#0#PHP" expanded="false" />
-                <element signature="e#5517#5788#0#PHP" expanded="false" />
-                <element signature="e#5874#6187#0#PHP" expanded="false" />
-                <element signature="e#6189#6494#0#PHP" expanded="false" />
-                <element signature="e#6589#6736#0#PHP" expanded="false" />
-                <element signature="e#6738#7095#0#PHP" expanded="false" />
-                <marker date="1515093874057" expanded="true" signature="2897:2973" ph="INSERT INTO `t_Categorias`... " />
-                <marker date="1515093874057" expanded="true" signature="2897:2986" ph="INSERT INTO `t_Categorias`... " />
-                <marker date="1515093874057" expanded="true" signature="3022:3088" ph="UPDATE `t_Categorias`... " />
-                <marker date="1515093874057" expanded="true" signature="3022:3113" ph="UPDATE `t_Categorias`... " />
-                <marker date="1515093874057" expanded="true" signature="3240:3320" ph="SELECT `idc`... t_Categorias" />
-                <marker date="1515093874057" expanded="true" signature="3608:3679" ph="SELECT `idc`... t_Categorias" />
-                <marker date="1515093874057" expanded="true" signature="4105:4143" ph="DELETE FROM `t_marca`... " />
-                <marker date="1515093874057" expanded="true" signature="4291:4372" ph="INSERT INTO `t_marca`... " />
-                <marker date="1515093874057" expanded="true" signature="4408:4494" ph="UPDATE `t_marca`... " />
-                <marker date="1515093874057" expanded="true" signature="4622:4700" ph="SELECT `idMa... t_marca" />
-                <marker date="1515093874057" expanded="true" signature="7162:7242" ph="SELECT `idsc... t_subCate" />
-              </folding>
+            <state relative-caret-position="204">
+              <caret line="322" column="0" lean-forward="true" selection-start-line="322" selection-start-column="0" selection-end-line="322" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -147,37 +111,38 @@
       <file leaf-file-name="tweb.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gvf/pages/cgi/tweb.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="479">
-              <caret line="177" column="49" lean-forward="false" selection-start-line="177" selection-start-column="49" selection-end-line="177" selection-end-column="49" />
+            <state relative-caret-position="360">
+              <caret line="153" column="16" lean-forward="true" selection-start-line="153" selection-start-column="16" selection-end-line="153" selection-end-column="16" />
               <folding>
-                <marker date="1515449254376" expanded="true" signature="480:579" ph="SELECT `id_m... t_marque" />
-                <marker date="1515449254376" expanded="true" signature="1001:1071" ph="SELECT `idc`... t_Categorias" />
-                <marker date="1515449254376" expanded="true" signature="1427:1529" ph="SELECT `idsc... t_subCate" />
-                <marker date="1515449254376" expanded="true" signature="1889:1959" ph="SELECT `idc`... t_Categorias" />
-                <marker date="1515449254376" expanded="true" signature="2260:2356" ph="SELECT `idCe... t_camposext" />
-                <marker date="1515449254376" expanded="true" signature="2733:2778" ph="SELECT `idc`... t_categorias" />
-                <marker date="1515449254376" expanded="true" signature="3093:3167" ph="SELECT `idsc... t_subCate" />
-                <marker date="1515449254376" expanded="true" signature="3500:3568" ph="SELECT `idsc... t_subCate" />
-                <marker date="1515449254376" expanded="true" signature="3500:3570" ph="SELECT `idsc... t_subCate" />
-                <marker date="1515449254376" expanded="true" signature="4069:4137" ph="SELECT `idMa... t_marca" />
-                <marker date="1515449254376" expanded="true" signature="4573:4821" ph="SELECT `idAr... t_artweb" />
-                <marker date="1515449254376" expanded="true" signature="4652:4703" ph="SELECT `rubr... trubro" />
-                <marker date="1515449254376" expanded="true" signature="4716:4771" ph="SELECT `Marc... t_marca" />
-                <marker date="1515449254376" expanded="true" signature="5330:5387" ph="SELECT `idz`... t_zonas" />
-                <marker date="1515449254376" expanded="true" signature="5734:5883" ph="SELECT `idCl... t_cliente" />
-                <marker date="1515449254376" expanded="true" signature="5782:5832" ph="SELECT `Zona... t_zonas" />
-                <marker date="1515449254376" expanded="true" signature="6505:6755" ph="SELECT `idA`... tarticulo" />
-                <marker date="1515449254376" expanded="true" signature="6505:6757" ph="SELECT `idCl... " />
-                <marker date="1515449254376" expanded="true" signature="6560:6617" ph="SELECT `Cate... t_categorias" />
-                <marker date="1515449254376" expanded="true" signature="6634:6690" ph="SELECT `SubC... t_subcate" />
-                <marker date="1515449254376" expanded="true" signature="7542:7587" ph="SELECT `idc`... t_categorias" />
-                <marker date="1515449254376" expanded="true" signature="7822:8348" ph="..." />
-                <marker date="1515449254376" expanded="true" signature="7849:8253" ph="..." />
-                <marker date="1515449254376" expanded="true" signature="7969:8019" ph="SELECT `Camp... t_camposext" />
-                <marker date="1515449254376" expanded="true" signature="7969:8044" ph="SELECT `Camp... t_camposext" />
-                <marker date="1515449254376" expanded="true" signature="7969:8055" ph="SELECT `Camp... t_camposext" />
-                <marker date="1515449254376" expanded="true" signature="7969:8056" ph="SELECT `Camp... t_camposext" />
-                <marker date="1515449254376" expanded="true" signature="8293:8301" ph="..." />
+                <marker date="1515516822840" expanded="true" signature="480:579" ph="SELECT `id_m... t_marque" />
+                <marker date="1515516822840" expanded="true" signature="1001:1071" ph="SELECT `idc`... t_Categorias" />
+                <marker date="1515516822840" expanded="true" signature="1427:1529" ph="SELECT `idsc... t_subCate" />
+                <marker date="1515516822840" expanded="true" signature="1889:1959" ph="SELECT `idc`... t_Categorias" />
+                <marker date="1515516822840" expanded="true" signature="2260:2356" ph="SELECT `idCe... t_camposext" />
+                <marker date="1515516822840" expanded="true" signature="2733:2778" ph="SELECT `idc`... t_categorias" />
+                <marker date="1515516822840" expanded="true" signature="3093:3167" ph="SELECT `idsc... t_subCate" />
+                <marker date="1515516822840" expanded="true" signature="3500:3568" ph="SELECT `idsc... t_subCate" />
+                <marker date="1515516822840" expanded="true" signature="3500:3570" ph="SELECT `idsc... t_subCate" />
+                <marker date="1515516822840" expanded="true" signature="4069:4137" ph="SELECT `idMa... t_marca" />
+                <marker date="1515516822840" expanded="true" signature="4573:4821" ph="SELECT `idAr... t_artweb" />
+                <marker date="1515516822840" expanded="true" signature="4652:4703" ph="SELECT `rubr... trubro" />
+                <marker date="1515516822840" expanded="true" signature="4716:4771" ph="SELECT `Marc... t_marca" />
+                <marker date="1515516822840" expanded="true" signature="5330:5387" ph="SELECT `idz`... t_zonas" />
+                <marker date="1515516822840" expanded="true" signature="5734:5883" ph="SELECT `idCl... t_cliente" />
+                <marker date="1515516822840" expanded="true" signature="5782:5832" ph="SELECT `Zona... t_zonas" />
+                <marker date="1515516822840" expanded="true" signature="6379:6436" ph="SELECT `idCe... t_camposext" />
+                <marker date="1515516822840" expanded="true" signature="6379:6440" ph="SELECT `idCe... t_camposext" />
+                <marker date="1515516822840" expanded="true" signature="6436:6440" ph="SELECT `idA`... tarticulo" />
+                <marker date="1515516822840" expanded="true" signature="6898:7148" ph="SELECT `idA`... tarticulo" />
+                <marker date="1515516822840" expanded="true" signature="6898:7150" ph="SELECT `idCl... " />
+                <marker date="1515516822840" expanded="true" signature="6953:7010" ph="SELECT `Cate... t_categorias" />
+                <marker date="1515516822840" expanded="true" signature="7027:7083" ph="SELECT `SubC... t_subcate" />
+                <marker date="1515516822840" expanded="true" signature="7935:7980" ph="SELECT `idc`... t_categorias" />
+                <marker date="1515516822840" expanded="true" signature="8243:8361" ph="..." />
+                <marker date="1515516822840" expanded="true" signature="8363:8449" ph="SELECT `Camp... t_camposext" />
+                <marker date="1515516822840" expanded="true" signature="8925:9081" ph="SELECT `idA`... tarticulo" />
+                <marker date="1515516822840" expanded="true" signature="8925:9119" ph="SELECT `idA`... tarticulo" />
+                <marker date="1515516822840" expanded="true" signature="8980:9036" ph="SELECT `SubC... t_subcate" />
               </folding>
             </state>
           </provider>
@@ -260,8 +225,8 @@
         <option value="$PROJECT_DIR$/gvf/pages/ABMArticulo.php" />
         <option value="$PROJECT_DIR$/gvf/js/comun.js" />
         <option value="$PROJECT_DIR$/WebMaq/a.html" />
-        <option value="$PROJECT_DIR$/gvf/pages/index2.php" />
         <option value="$PROJECT_DIR$/gvf/pages/cgi/tweb.php" />
+        <option value="$PROJECT_DIR$/gvf/pages/index2.php" />
       </list>
     </option>
   </component>
@@ -281,8 +246,8 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="-308" />
+    <option name="y" value="285" />
     <option name="width" value="1296" />
     <option name="height" value="1000" />
   </component>
@@ -304,6 +269,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -320,13 +286,18 @@
             <path>
               <item name="gv" type="b2602c69:ProjectViewProjectNode" />
               <item name="gv" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="gvf" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="gv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gv" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="WebMaq" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -389,7 +360,8 @@
       <workItem from="1514916412130" duration="36542000" />
       <workItem from="1515101070516" duration="13175000" />
       <workItem from="1515171435276" duration="33642000" />
-      <workItem from="1515431565889" duration="13099000" />
+      <workItem from="1515431565889" duration="13195000" />
+      <workItem from="1515501676743" duration="12807000" />
     </task>
     <task id="LOCAL-00001" summary="copia general">
       <created>1515186149509</created>
@@ -402,22 +374,23 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="181075000" />
+    <option name="totallyTimeSpent" value="193978000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17450683" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17408586" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960254" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -428,6 +401,28 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17408586" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960254" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -691,14 +686,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gvf/js/sorttable.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="20" lean-forward="false" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gvf/pages/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="632">
@@ -710,7 +697,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-116">
           <caret line="0" column="3" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -733,9 +719,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="258">
           <caret line="64" column="70" lean-forward="true" selection-start-line="64" selection-start-column="70" selection-end-line="64" selection-end-column="70" />
-          <folding>
-            <marker date="1515249303593" expanded="true" signature="387:442" ph="SELECT `idve... ver" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -796,67 +779,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="271">
           <caret line="97" column="43" lean-forward="false" selection-start-line="97" selection-start-column="28" selection-end-line="98" selection-end-column="136" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebMaq/a.html" />
+    <entry file="file://$PROJECT_DIR$/gvf/js/comun.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="50" column="10" lean-forward="false" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebMaq/a.html">
+    <entry file="file://$PROJECT_DIR$/gvf/js/sorttable.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+        <state relative-caret-position="68">
+          <caret line="4" column="20" lean-forward="false" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="68" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gvf/pages/ABMArticulo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="90" column="119" lean-forward="false" selection-start-line="90" selection-start-column="20" selection-end-line="90" selection-end-column="129" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gvf/pages/cgi/tweb.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="177" column="49" lean-forward="false" selection-start-line="177" selection-start-column="49" selection-end-line="177" selection-end-column="49" />
-          <folding>
-            <marker date="1515449254376" expanded="true" signature="480:579" ph="SELECT `id_m... t_marque" />
-            <marker date="1515449254376" expanded="true" signature="1001:1071" ph="SELECT `idc`... t_Categorias" />
-            <marker date="1515449254376" expanded="true" signature="1427:1529" ph="SELECT `idsc... t_subCate" />
-            <marker date="1515449254376" expanded="true" signature="1889:1959" ph="SELECT `idc`... t_Categorias" />
-            <marker date="1515449254376" expanded="true" signature="2260:2356" ph="SELECT `idCe... t_camposext" />
-            <marker date="1515449254376" expanded="true" signature="2733:2778" ph="SELECT `idc`... t_categorias" />
-            <marker date="1515449254376" expanded="true" signature="3093:3167" ph="SELECT `idsc... t_subCate" />
-            <marker date="1515449254376" expanded="true" signature="3500:3568" ph="SELECT `idsc... t_subCate" />
-            <marker date="1515449254376" expanded="true" signature="3500:3570" ph="SELECT `idsc... t_subCate" />
-            <marker date="1515449254376" expanded="true" signature="4069:4137" ph="SELECT `idMa... t_marca" />
-            <marker date="1515449254376" expanded="true" signature="4573:4821" ph="SELECT `idAr... t_artweb" />
-            <marker date="1515449254376" expanded="true" signature="4652:4703" ph="SELECT `rubr... trubro" />
-            <marker date="1515449254376" expanded="true" signature="4716:4771" ph="SELECT `Marc... t_marca" />
-            <marker date="1515449254376" expanded="true" signature="5330:5387" ph="SELECT `idz`... t_zonas" />
-            <marker date="1515449254376" expanded="true" signature="5734:5883" ph="SELECT `idCl... t_cliente" />
-            <marker date="1515449254376" expanded="true" signature="5782:5832" ph="SELECT `Zona... t_zonas" />
-            <marker date="1515449254376" expanded="true" signature="6505:6755" ph="SELECT `idA`... tarticulo" />
-            <marker date="1515449254376" expanded="true" signature="6505:6757" ph="SELECT `idCl... " />
-            <marker date="1515449254376" expanded="true" signature="6560:6617" ph="SELECT `Cate... t_categorias" />
-            <marker date="1515449254376" expanded="true" signature="6634:6690" ph="SELECT `SubC... t_subcate" />
-            <marker date="1515449254376" expanded="true" signature="7542:7587" ph="SELECT `idc`... t_categorias" />
-            <marker date="1515449254376" expanded="true" signature="7822:8348" ph="..." />
-            <marker date="1515449254376" expanded="true" signature="7849:8253" ph="..." />
-            <marker date="1515449254376" expanded="true" signature="7969:8019" ph="SELECT `Camp... t_camposext" />
-            <marker date="1515449254376" expanded="true" signature="7969:8044" ph="SELECT `Camp... t_camposext" />
-            <marker date="1515449254376" expanded="true" signature="7969:8055" ph="SELECT `Camp... t_camposext" />
-            <marker date="1515449254376" expanded="true" signature="7969:8056" ph="SELECT `Camp... t_camposext" />
-            <marker date="1515449254376" expanded="true" signature="8293:8301" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gvf/pages/cgi/CWeb.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="91" column="15" lean-forward="true" selection-start-line="90" selection-start-column="43" selection-end-line="91" selection-end-column="15" />
+        <state relative-caret-position="-816">
+          <caret line="91" column="15" lean-forward="false" selection-start-line="90" selection-start-column="43" selection-end-line="91" selection-end-column="15" />
           <folding>
             <element signature="e#1285#1424#0#PHP" expanded="false" />
             <element signature="e#1445#2003#0#PHP" expanded="false" />
@@ -884,22 +830,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gvf/js/comun.js">
+    <entry file="file://$PROJECT_DIR$/gvf/pages/ABMArticulo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="50" column="10" lean-forward="false" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="20" />
+        <state relative-caret-position="190">
+          <caret line="110" column="2" lean-forward="true" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="46" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gvf/pages/cgi/tweb.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="153" column="16" lean-forward="true" selection-start-line="153" selection-start-column="16" selection-end-line="153" selection-end-column="16" />
+          <folding>
+            <marker date="1515516822840" expanded="true" signature="480:579" ph="SELECT `id_m... t_marque" />
+            <marker date="1515516822840" expanded="true" signature="1001:1071" ph="SELECT `idc`... t_Categorias" />
+            <marker date="1515516822840" expanded="true" signature="1427:1529" ph="SELECT `idsc... t_subCate" />
+            <marker date="1515516822840" expanded="true" signature="1889:1959" ph="SELECT `idc`... t_Categorias" />
+            <marker date="1515516822840" expanded="true" signature="2260:2356" ph="SELECT `idCe... t_camposext" />
+            <marker date="1515516822840" expanded="true" signature="2733:2778" ph="SELECT `idc`... t_categorias" />
+            <marker date="1515516822840" expanded="true" signature="3093:3167" ph="SELECT `idsc... t_subCate" />
+            <marker date="1515516822840" expanded="true" signature="3500:3568" ph="SELECT `idsc... t_subCate" />
+            <marker date="1515516822840" expanded="true" signature="3500:3570" ph="SELECT `idsc... t_subCate" />
+            <marker date="1515516822840" expanded="true" signature="4069:4137" ph="SELECT `idMa... t_marca" />
+            <marker date="1515516822840" expanded="true" signature="4573:4821" ph="SELECT `idAr... t_artweb" />
+            <marker date="1515516822840" expanded="true" signature="4652:4703" ph="SELECT `rubr... trubro" />
+            <marker date="1515516822840" expanded="true" signature="4716:4771" ph="SELECT `Marc... t_marca" />
+            <marker date="1515516822840" expanded="true" signature="5330:5387" ph="SELECT `idz`... t_zonas" />
+            <marker date="1515516822840" expanded="true" signature="5734:5883" ph="SELECT `idCl... t_cliente" />
+            <marker date="1515516822840" expanded="true" signature="5782:5832" ph="SELECT `Zona... t_zonas" />
+            <marker date="1515516822840" expanded="true" signature="6379:6436" ph="SELECT `idCe... t_camposext" />
+            <marker date="1515516822840" expanded="true" signature="6379:6440" ph="SELECT `idCe... t_camposext" />
+            <marker date="1515516822840" expanded="true" signature="6436:6440" ph="SELECT `idA`... tarticulo" />
+            <marker date="1515516822840" expanded="true" signature="6898:7148" ph="SELECT `idA`... tarticulo" />
+            <marker date="1515516822840" expanded="true" signature="6898:7150" ph="SELECT `idCl... " />
+            <marker date="1515516822840" expanded="true" signature="6953:7010" ph="SELECT `Cate... t_categorias" />
+            <marker date="1515516822840" expanded="true" signature="7027:7083" ph="SELECT `SubC... t_subcate" />
+            <marker date="1515516822840" expanded="true" signature="7935:7980" ph="SELECT `idc`... t_categorias" />
+            <marker date="1515516822840" expanded="true" signature="8243:8361" ph="..." />
+            <marker date="1515516822840" expanded="true" signature="8363:8449" ph="SELECT `Camp... t_camposext" />
+            <marker date="1515516822840" expanded="true" signature="8925:9081" ph="SELECT `idA`... tarticulo" />
+            <marker date="1515516822840" expanded="true" signature="8925:9119" ph="SELECT `idA`... tarticulo" />
+            <marker date="1515516822840" expanded="true" signature="8980:9036" ph="SELECT `SubC... t_subcate" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gvf/pages/index2.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="246" column="78" lean-forward="true" selection-start-line="246" selection-start-column="78" selection-end-line="246" selection-end-column="78" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="204">
+          <caret line="322" column="0" lean-forward="true" selection-start-line="322" selection-start-column="0" selection-end-line="322" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
