@@ -78,7 +78,7 @@ function pulsar(e) {
 <?php
     include 'menu.php';
 ?> 
-    <div class="row marco">
+  <div class="row marco NV">
          <div>
         <div class="col-md-6">
             <div class=" input-group col-md-6" style="padding-left: 2em;">
@@ -173,13 +173,59 @@ function pulsar(e) {
           <input type="file" id="Carga_Imagen" name="Carga_Imagen" accept="image/*" value="../../WebMaq/NoImagen.png">
       </div><!-- Fin col de la tabla -->
   </div>
-        <div class="col-lg-4 cuadro">
-
-        </div>
-
-
 
     </div>
+
+  <div class="row" style="padding-left: 1em;margin:0px;padding-top: 1em;">
+    <div class="col-md-6">
+     <!---------------------------------------------------------------------------- -->
+        <div class=" input-group col-md-11">
+            <p class="input-group-addon">Categoria</p>
+            <select name="FCat" id="FCat" class="form-control">
+                <option value=""> Todos</option>
+            </select>
+        </div><br>
+        <div class="form-group input-group" >
+            <p class="input-group-addon"><i class="fa fa-edit" style="margin:0px;"></i></p>
+            <input type="text" class="form-control" placeholder="Codigo / Articulo" id="Bus">
+        </div>
+    </div>
+    <div class="col-md-6">
+          <div class=" input-group col-md-11">
+              <p class="input-group-addon">Sub Cate</p>
+              <select name="FSCat" id="FSCat" class="form-control">
+                  <option value=""> Todos</option>
+              </select>
+          </div><br>
+        <div  class="form-group input-group" style="width: 100%;">
+            <div class="col-xs-6">
+                <select name="otros" class="form-control" id="otros">
+                    <option value=""> -- </option>
+                </select>
+            </div>
+            <div class="col-xs-6">
+                <input type="text" id="BusOtros" class="form-control">
+            </div>
+        </div>
+     </div>
+        <!-- *********************************************************************** -->
+
+
+  </div>
+
+<div class="row">      <!-------------  Listas  --------------------------------------------------------------- -->
+ <div class="col-md-12" id="TListas">
+
+
+
+ </div>
+
+
+
+
+</div>  <!-- *********************** Listas ********************************* -->
+
+
     <!-- fin row -->
 
     <!-- /#wrapper -->
@@ -192,21 +238,29 @@ function pulsar(e) {
     <script type="text/javascript"  src="../js/sorttable.js"></script>
     <script src="../dist/js/sb-admin-2.js?1"></script>
 
-<script>
+<script>  '------  Script de articulos ------------ '
     function CargaCat() {
         $("#Cat").load("cgi/tweb.php?T=24", function (res){
+            document.getElementById('FCat').innerHTML=res;
             document.getElementById("Cat").addEventListener("change", function() {
                 let c=document.getElementById('Cat').value;
-                $("#SCat").load("cgi/tweb.php?T=25&C=" +c , function (res){ });
+                $("#SCat").load("cgi/tweb.php?T=25&C=" +c , function (res){});
+            });
+            document.getElementById("FCat").addEventListener("change", function() {
+                $("#FSCat").load("cgi/tweb.php?T=25&C=" + document.getElementById('Cat').value, function (res){
+                });
             });
         });
     }
 
 <!-- iniciar -->
     (function () {
+
+        $("#TListas").load("cgi/tweb.php?T=101", function (e) {});
         CargaCat();
         document.getElementById('eImg').addEventListener("dblclick",function (ev) {  document.getElementById('Carga_Imagen').click()}  )
     })();
 </script>
+
 </body>
 </html>

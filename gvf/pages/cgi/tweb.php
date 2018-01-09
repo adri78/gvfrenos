@@ -91,7 +91,22 @@ if ($modo==25) { // ver Lista cartegorias
         }
     print $tmp;
 }
+if ($modo==26) { // ver Lista cartegorias
+    $sql = "SELECT `idsc`, `SubCategoria`, `cid` FROM `t_subCate` ORDER BY `cid` ;";
+    $tmp="";
+    $segmento = mysqli_query($mysqli, $sql);
+    $x=0;
+    while ($row = mysqli_fetch_array($segmento)) {
+        if($x==0){
+            $tmp= $tmp.'<li class="active"><a data-toggle="tab" href="#'.$row['SubCategoria'].'">'.$row['SubCategoria'].'</a></li>';
+        }else{
+            $tmp= $tmp.'<li><a data-toggle="tab" href="#'.$row['SubCategoria'].'">'.$row['SubCategoria'].'</a></li>';
+        }
+        $x=$x+1;
 
+    }
+    print $tmp;
+}
 if ($modo==3) { // Tabla marca
 	$sql = "SELECT `idMarca`, `Marca`, `Logo` FROM `t_marca`ORDER BY `Marca` ASC";
 	$segmento = mysqli_query( $mysqli, $sql );
@@ -141,7 +156,7 @@ if ($modo==6) { // Tabla Clientes
 
 
 /************************************************* Listado General tipo 1 ***********************************************/
-if ($modo==100) { // Tabla Clientes
+if ($modo==100) { // Tabla general articulos
     $sql = "SELECT `idA`,`cat`, `SC` , `Codigo`, `Art`, `Precio`, (SELECT `Categoria`  FROM `t_categorias` WHERE `idc`=`cat`) as Categoria, (SELECT `SubCategoria` FROM `t_subcate` WHERE `idsc`=`SC`) as SubCat, `imagen` FROM `tarticulo` ORDER BY `cat`,`SC`, `Art`  ";
     $segmento = mysqli_query($mysqli, $sql );
     $tabla = "";
@@ -153,8 +168,24 @@ if ($modo==100) { // Tabla Clientes
 }
 
 /*************************************************** Fin Listado tipo 1 *************************************************/
+/************************************************* Listado Tabla Categorias   ***********************************************/
+if ($modo==101) { // Tabla X Categorias
+    $sql = "SELECT `idc`, `Categoria` FROM `t_categorias` " ;
+    $segmento = mysqli_query($mysqli, $sql);
+    while ($row = mysqli_fetch_array($segmento)) {
+        print "<h3>".$row["Categoria"]."</h3>";
 
-
-
-mysqli_close($mysqli);
+        print'<table class="table table-bordered sortable" id="TT' . $row["idc"] . '"><thead  class="Titulo"><tr><th>Codigo</th><th>Articulo</th><th>Precio</th><th>Sub Cate</th>';
+            /* Campos extras */
+           $sql2 = "SELECT `CampoE` FROM `t_camposext` WHERE `catIs`='".$row["idc"]."' ORDER BY `idCe` ASC; " ;
+           //print $sql2;
+           $C = mysqli_query($mysqli, $sql2);
+        while ($r= mysqli_fetch_array($C)) {
+            print '<th>'.$r["CampoE"].'</th>';
+        }
+        print'</tr></thead><tbody id="LA'. $row["idc"] .'"></tbody></table>';
+    }
+    mysqli_close($mysqli);
+}
+/************************************************* Listado Tabla Categorias  ***********************************************/
 ?>
