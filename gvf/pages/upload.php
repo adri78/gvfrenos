@@ -9,12 +9,14 @@ switch ($C) {
 	case "1":
 		$upload_folder = '../../WebMaq';
 		break;
-	case 3:
-		$upload_folder = 'imarke';
+
+	case "2":
+        $upload_folder = '../../ArtImg';
 		break;
-	case 2:
-		echo "i es igual a 2";
-		break;
+
+    case 3:
+        $upload_folder = 'imarke';
+        break;
 }
 
 $nombre_archivo = $_FILES['archivo']['name'];

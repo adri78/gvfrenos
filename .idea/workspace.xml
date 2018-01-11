@@ -8,6 +8,7 @@
     <list default="true" id="bbcb2ed7-55b7-4061-96e5-ca166300071f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/gvf/pages/index2.php" afterPath="$PROJECT_DIR$/gvf/pages/index2.php" />
+      <change beforePath="$PROJECT_DIR$/gvf/pages/upload.php" afterPath="$PROJECT_DIR$/gvf/pages/upload.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,20 +31,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index2.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index2.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gvf/pages/index2.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="332" column="23" lean-forward="false" selection-start-line="332" selection-start-column="23" selection-end-line="332" selection-end-column="23" />
+            <state relative-caret-position="152">
+              <caret line="424" column="18" lean-forward="true" selection-start-line="424" selection-start-column="18" selection-end-line="424" selection-end-column="18" />
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Marquesina.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gvf/pages/Marquesina.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="174" column="34" lean-forward="true" selection-start-line="174" selection-start-column="34" selection-end-line="174" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="upload.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gvf/pages/upload.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="13" lean-forward="true" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="1515672196.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ArtImg/1515672196.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="CWeb.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gvf/pages/cgi/CWeb.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
+            <state relative-caret-position="2312">
               <caret line="190" column="15" lean-forward="false" selection-start-line="190" selection-start-column="14" selection-end-line="190" selection-end-column="58" />
               <folding>
                 <element signature="e#6#90#0#PHP" expanded="true" />
@@ -78,7 +106,7 @@
       <file leaf-file-name="tweb.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gvf/pages/cgi/tweb.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
+            <state relative-caret-position="2601">
               <caret line="153" column="16" lean-forward="false" selection-start-line="153" selection-start-column="16" selection-end-line="153" selection-end-column="16" />
               <folding>
                 <marker date="1515516822840" expanded="true" signature="480:579" ph="SELECT `id_m... t_marque" />
@@ -126,7 +154,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>cambi</find>
       <find>single-project</find>
       <find>Limpiar1</find>
       <find>cru</find>
@@ -140,7 +167,6 @@
       <find>id=</find>
       <find>SNuCli</find>
       <find>Categoria:</find>
-      <find>FileAjax</find>
       <find>Limpiar</find>
       <find>IDC</find>
       <find>Csub</find>
@@ -156,6 +182,8 @@
       <find>&lt;script&gt;</find>
       <find>Bus</find>
       <find>20</find>
+      <find>FileAjax</find>
+      <find>uploadAjax</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -173,7 +201,6 @@
         <option value="$PROJECT_DIR$/gvf/pages/c.php" />
         <option value="$PROJECT_DIR$/gvf/pages/Marquesina.php" />
         <option value="$PROJECT_DIR$/gvf/pages/cgi/bd3.php" />
-        <option value="$PROJECT_DIR$/gvf/pages/upload.php" />
         <option value="$PROJECT_DIR$/Listado.php" />
         <option value="$PROJECT_DIR$/gvf/pages/ABMZonas.php" />
         <option value="$PROJECT_DIR$/gvf/pages/ABMMarca.php" />
@@ -194,6 +221,7 @@
         <option value="$PROJECT_DIR$/gvf/pages/cgi/tweb.php" />
         <option value="$PROJECT_DIR$/gvf/pages/cgi/CWeb.php" />
         <option value="$PROJECT_DIR$/gvf/pages/index2.php" />
+        <option value="$PROJECT_DIR$/gvf/pages/upload.php" />
       </list>
     </option>
   </component>
@@ -236,7 +264,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -248,31 +275,18 @@
             <path>
               <item name="gv" type="b2602c69:ProjectViewProjectNode" />
               <item name="gv" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="gvf" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ArtImg" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="gv" type="b2602c69:ProjectViewProjectNode" />
               <item name="gv" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="gvf" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="gv" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gv" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="gvf" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="pages" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="gv" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gv" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="gvf" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="pages" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="cgi" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -282,13 +296,14 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\gv" />
+      <recent name="C:\wamp64\www\Frenos 1\gvf\pages\cgi" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\laragon\www\gv\gvf\pages" />
       <recent name="C:\laragon\www\gv\gvf\pages\cgi" />
       <recent name="C:\wamp64\www\Frenos 1" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\Frenos 1\gvf\pages\cgi" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -337,7 +352,8 @@
       <workItem from="1515171435276" duration="33642000" />
       <workItem from="1515431565889" duration="13195000" />
       <workItem from="1515501676743" duration="13427000" />
-      <workItem from="1515620928675" duration="9134000" />
+      <workItem from="1515620928675" duration="9271000" />
+      <workItem from="1515671645838" duration="751000" />
     </task>
     <task id="LOCAL-00001" summary="copia general">
       <created>1515186149509</created>
@@ -350,13 +366,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="203732000" />
+    <option name="totallyTimeSpent" value="204620000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1272" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16294643" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16294643" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -423,13 +439,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../ua1/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -515,20 +524,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="602">
           <caret line="182" column="53" lean-forward="true" selection-start-line="182" selection-start-column="53" selection-end-line="182" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gvf/pages/Marquesina.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1020">
-          <caret line="145" column="13" lean-forward="false" selection-start-line="145" selection-start-column="12" selection-end-line="145" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gvf/pages/upload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -718,7 +713,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="110" column="2" lean-forward="false" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -760,24 +754,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-          <folding>
-            <marker date="1515079973719" expanded="true" signature="1719:1820" ph="UPDATE `t_cliente`... " />
-            <marker date="1515079973719" expanded="true" signature="2104:2246" ph="INSERT INTO `t_cliente`... " />
-            <marker date="1515079973719" expanded="true" signature="2520:2558" ph="DELETE FROM `t_cliente`... " />
-            <marker date="1515079973719" expanded="true" signature="2659:2807" ph="SELECT `idCl... t_cliente" />
-            <marker date="1515079973719" expanded="true" signature="3387:3466" ph="UPDATE `t_camposext`... " />
-            <marker date="1515079973719" expanded="true" signature="3503:3581" ph="INSERT INTO `t_camposext`... " />
-            <marker date="1515079973719" expanded="true" signature="3695:3734" ph="DELETE FROM `t_cliente`... " />
-            <marker date="1515079973719" expanded="true" signature="3836:3901" ph="SELECT `idCe... t_camposext" />
-            <marker date="1515079973719" expanded="true" signature="3900:3901" ph="SELECT `idCl... t_cliente" />
-            <marker date="1515079973719" expanded="true" signature="4149:4215" ph="SELECT `idCe... t_camposext" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gvf/pages/cgi/tweb.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
+        <state relative-caret-position="2601">
           <caret line="153" column="16" lean-forward="false" selection-start-line="153" selection-start-column="16" selection-end-line="153" selection-end-column="16" />
           <folding>
             <marker date="1515516822840" expanded="true" signature="480:579" ph="SELECT `id_m... t_marque" />
@@ -817,13 +799,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
           <caret line="266" column="0" lean-forward="true" selection-start-line="264" selection-start-column="7" selection-end-line="274" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gvf/pages/cgi/CWeb.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
+        <state relative-caret-position="2312">
           <caret line="190" column="15" lean-forward="false" selection-start-line="190" selection-start-column="14" selection-end-line="190" selection-end-column="58" />
           <folding>
             <element signature="e#6#90#0#PHP" expanded="true" />
@@ -854,10 +835,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/gvf/pages/upload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="13" lean-forward="true" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ArtImg/1515672196.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/gvf/pages/index2.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="332" column="23" lean-forward="false" selection-start-line="332" selection-start-column="23" selection-end-line="332" selection-end-column="23" />
+        <state relative-caret-position="152">
+          <caret line="424" column="18" lean-forward="true" selection-start-line="424" selection-start-column="18" selection-end-line="424" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gvf/pages/Marquesina.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="174" column="34" lean-forward="true" selection-start-line="174" selection-start-column="34" selection-end-line="174" selection-end-column="34" />
           <folding />
         </state>
       </provider>

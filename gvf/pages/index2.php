@@ -317,26 +317,36 @@ function LimpiART() {
     document.getElementById('eImg').setAttribute("src","none.png");
     document.getElementById('Cod').focus();
 }
-<!-- iniciar -->
-    (function () {
 
-        $("#TListas").load("cgi/tweb.php?T=101", function (e) {
-            OcultaTablas();
+
+    function uploadAjax(F,C) {
+        let inputFileImage = document.getElementById(F);
+        let file = inputFileImage.files[0];
+        var data = new FormData();
+        data.append('archivo', file);
+        let url = "upload.php?c="+ C ;
+        $.ajax({
+            url: url,
+            type: 'POST',
+            contentType: false,
+            data: data,
+            processData: false,
+            cache: false
+        }).done(function(data){
+            //alert(data.msg);
+            console.log(data.msg);
+            document.getElementById('eImg').setAttribute("src",data.msg);
 
         });
-        CargaCat();
-        document.getElementById('eImg').addEventListener("dblclick",function (ev) {  document.getElementById('Carga_Imagen').click()}  )
+    }
 
-        document.getElementById('BtnNuevo').addEventListener("click",function(){
-
-            document.getElementById('fichas').style.display="block";
-            LimpiART();
+    function FileAjax(F,C) {
+        const a= document.getElementById(F).addEventListener("change",function () {
+            uploadAjax(F,C);
         });
+    }
 
-
-    })();
-</script>
-<script>  /* ********************  Buscador ***************************************** */
+  /* ********************  Buscador ***************************************** */
     function PreFiltro() {
         let c=document.getElementById('FCat').value;
         let Tc='TT'+c;
@@ -387,9 +397,7 @@ function LimpiART() {
            }
         }
     }
-</script>
 
-<script>
     function VerArt(id) {
         document.getElementById('fichas').style.display="block";
         let d={T:20,ID:id};
@@ -406,10 +414,31 @@ function LimpiART() {
             });
 
             document.getElementById('eImg').setAttribute("src",Datos[6]);
-
+            document.getElementById('Cod').focus();
            /* CargatSub();*/
         });
     }
+</script>
+
+<script>
+    <!-- iniciar -->
+    (function () {
+         FileAjax("Carga_Imagen",2);
+        $("#TListas").load("cgi/tweb.php?T=101", function (e) {
+            OcultaTablas();
+
+        });
+        CargaCat();
+        document.getElementById('eImg').addEventListener("dblclick",function (ev) {  document.getElementById('Carga_Imagen').click()}  )
+
+        document.getElementById('BtnNuevo').addEventListener("click",function(){
+
+            document.getElementById('fichas').style.display="block";
+            LimpiART();
+        });
+
+
+    })();
 </script>
 </body>
 </html>
