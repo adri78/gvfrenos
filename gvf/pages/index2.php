@@ -90,11 +90,11 @@ function pulsar(e) {
 <?php
     include 'menu.php';
 ?> 
-  <div class="row marco NV">
+  <div class="row marco NV" id="fichas">
          <div>
         <div class="col-md-6">
             <div class=" input-group col-md-6" style="padding-left: 2em;">
-                <p class="input-group-addon">COD</p>
+                <p class="input-group-addon">COD <span id="Artid"></span></p>
                 <input class="form-control" placeholder="Codigo" id="Cod" type="text">
             </div><br>
             <div class=" input-group " style="padding-left: 2em;margin:0px">
@@ -126,7 +126,7 @@ function pulsar(e) {
 
                 <div  class="col-md-6">
                     <a class="btn btn-success B">Grabar</a>
-                    <a class="btn btn-info B">Salir</a>
+                    <a class="btn btn-info B" onclick="document.getElementById('fichas').style.display='none';">Salir</a>
                     <a class="btn btn-danger B">Borrar</a>
                  </div>
             </div>
@@ -293,6 +293,13 @@ function pulsar(e) {
              $(cla).load("cgi/tweb.php?T=102&C=" +c , function (e) {
                  document.getElementById(cla2).style.display="table";
                  $(cla3).tableSorter();
+                 let X= document.querySelectorAll(cla3 +' tr');
+                 for(let y=0;y < X.length; y++ ) {
+                     X[y].addEventListener("click", function (e) {
+                         e.preventDefault();
+                         VerArt(this.getAttribute('data-id'));
+                     });
+                 }
             });
         });
 
@@ -310,7 +317,7 @@ function pulsar(e) {
         document.getElementById('eImg').addEventListener("dblclick",function (ev) {  document.getElementById('Carga_Imagen').click()}  )
     })();
 </script>
-<script>
+<script>  /* ********************  Buscador ***************************************** */
     function PreFiltro() {
         let c=document.getElementById('FCat').value;
         let Tc='TT'+c;
@@ -324,11 +331,11 @@ function pulsar(e) {
 
     function BuscaGene() {
 
-        // Declare variables
         var Bus, c , table, tr, td,td2, i,Tc;
         Bus = document.getElementById("Bus").value.toUpperCase();
         if (Bus.length >2){
             c=document.getElementById('FCat').value;
+            let cs=document.getElementById('FSCat').value;
             Tc='TT'+c;
             table = document.getElementById(Tc);
             tr = table.getElementsByTagName("tr");
@@ -337,7 +344,7 @@ function pulsar(e) {
                 td = tr[i].getElementsByTagName("td")[0];
                 td2 = tr[i].getElementsByTagName("td")[1];
                 if (td) {
-                    if ((td.innerHTML.toUpperCase().indexOf(Bus) > -1) ||(td2.innerHTML.toUpperCase().indexOf(Bus) > -1)) {
+                    if (((td.innerHTML.toUpperCase().indexOf(Bus) > -1) ||(td2.innerHTML.toUpperCase().indexOf(Bus) > -1))&& (( tr[i].getAttribute("data-sc") == cs)||( cs == "" ))) {
                         tr[i].style.display = "";
                     } else {
                         tr[i].style.display = "none";
@@ -347,8 +354,6 @@ function pulsar(e) {
         }
        if (Bus.length < 2 ){PreFiltro()}
     }
-
-
 
     function SubFiltro() {
         let c=document.getElementById('FCat').value;
@@ -362,6 +367,29 @@ function pulsar(e) {
                tr[i].style.display = "none";
            }
         }
+    }
+</script>
+
+<script>
+    function VerArt(id) {
+        document.getElementById('fichas').style.display="block";
+        let d={T:20,ID:id};
+        $.post("cgi/CWeb.php", d, function(result) {
+            /* "$ID|$Codigo|$Art|$Precio|$cat|$SC|$imagen"; */
+            let Datos = result.split("|");
+            document.getElementById('Artid').innerText=Datos[0];
+            document.getElementById('Cod').value=Datos[1];
+            document.getElementById('Art').value=Datos[2];
+            document.getElementById('Pre').value=Datos[3];
+            document.getElementById('Cat').value=Datos[4];
+            $("#SCat").load("cgi/tweb.php?T=25&C=" + Datos[4], function (res){
+                document.getElementById('SCat').value=Datos[5];
+            });
+
+            document.getElementById('eImg').setAttribute("src",Datos[6]);
+
+           /* CargatSub();*/
+        });
     }
 </script>
 </body>

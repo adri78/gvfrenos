@@ -175,7 +175,22 @@ if ($Modo==15) { // ver Zonas
 	}
 }
 // ************************************  Fin Zonas *** ***********************  //
+if ($Modo==20) { // ver articulo X id
+    $sql = "SELECT `idA`, `Codigo`, `Art`, `Precio`, `cat`, `SC`, `imagen` FROM `tarticulo` WHERE `idA`='" . $ID . "';";
 
+    $segmento = mysqli_query($mysqli, $sql);
+    while ($row = mysqli_fetch_array($segmento)) {
+        $ID = $row['idA'];
+        $Codigo = $row['Codigo'];
+        $Art = $row['Art'];
+        $Precio = $row['Precio'];
+        $cat= $row['cat'];
+        $SC = $row['SC'];
+        $imagen = $row['imagen'];
+
+        print "$ID|$Codigo|$Art|$Precio|$cat|$SC|$imagen";
+    }
+}
 
 if ($Modo==100) { // Marcas OPTION
     $sql = "SELECT `idMarca`, `Marca` FROM `t_marca` ORDER BY `Marca`;";
