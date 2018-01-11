@@ -224,7 +224,7 @@ function pulsar(e) {
 
             </div>
             <div class="col-xs-2">
-                <a class="btn btn-success btn-lg">Nuevo</a>
+                <a class="btn btn-success btn-lg" id="BtnNuevo">Nuevo</a>
 
             </div>
         </div>
@@ -305,7 +305,18 @@ function pulsar(e) {
 
         document.getElementById('FSCat').addEventListener("change", function() { SubFiltro();});
     }
+function LimpiART() {
+    document.getElementById('Artid').innerText="";
+    document.getElementById('Cod').value="";
+    document.getElementById('Art').value="";
+    document.getElementById('Pre').value="";
+    document.getElementById('Cat').value="";
+    document.getElementById('SCat').value="";
 
+
+    document.getElementById('eImg').setAttribute("src","none.png");
+    document.getElementById('Cod').focus();
+}
 <!-- iniciar -->
     (function () {
 
@@ -315,6 +326,14 @@ function pulsar(e) {
         });
         CargaCat();
         document.getElementById('eImg').addEventListener("dblclick",function (ev) {  document.getElementById('Carga_Imagen').click()}  )
+
+        document.getElementById('BtnNuevo').addEventListener("click",function(){
+
+            document.getElementById('fichas').style.display="block";
+            LimpiART();
+        });
+
+
     })();
 </script>
 <script>  /* ********************  Buscador ***************************************** */

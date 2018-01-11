@@ -7,7 +7,6 @@
   <component name="ChangeListManager">
     <list default="true" id="bbcb2ed7-55b7-4061-96e5-ca166300071f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/gvf/pages/cgi/CWeb.php" afterPath="$PROJECT_DIR$/gvf/pages/cgi/CWeb.php" />
       <change beforePath="$PROJECT_DIR$/gvf/pages/index2.php" afterPath="$PROJECT_DIR$/gvf/pages/index2.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,8 +33,8 @@
       <file leaf-file-name="index2.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gvf/pages/index2.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-44">
-              <caret line="128" column="121" lean-forward="false" selection-start-line="128" selection-start-column="121" selection-end-line="128" selection-end-column="121" />
+            <state relative-caret-position="296">
+              <caret line="332" column="23" lean-forward="false" selection-start-line="332" selection-start-column="23" selection-end-line="332" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -213,9 +212,9 @@
       <path value="C:\wamp64\bin\php\php5.6.25" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
-    <option name="y" value="114" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1405" />
+    <option name="y" value="41" />
     <option name="width" value="1296" />
     <option name="height" value="1000" />
   </component>
@@ -338,7 +337,7 @@
       <workItem from="1515171435276" duration="33642000" />
       <workItem from="1515431565889" duration="13195000" />
       <workItem from="1515501676743" duration="13427000" />
-      <workItem from="1515620928675" duration="8406000" />
+      <workItem from="1515620928675" duration="9134000" />
     </task>
     <task id="LOCAL-00001" summary="copia general">
       <created>1515186149509</created>
@@ -351,10 +350,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="203004000" />
+    <option name="totallyTimeSpent" value="203732000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="114" width="1296" height="1000" extended-state="0" />
+    <frame x="1272" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16294643" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -365,7 +364,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960254" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46875" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -857,8 +856,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gvf/pages/index2.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-44">
-          <caret line="128" column="121" lean-forward="false" selection-start-line="128" selection-start-column="121" selection-end-line="128" selection-end-column="121" />
+        <state relative-caret-position="296">
+          <caret line="332" column="23" lean-forward="false" selection-start-line="332" selection-start-column="23" selection-end-line="332" selection-end-column="23" />
           <folding />
         </state>
       </provider>
