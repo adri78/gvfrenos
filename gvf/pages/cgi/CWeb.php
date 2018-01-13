@@ -30,12 +30,13 @@ if(isset($_POST["Detalle"])){ $Detalle=(trim ( $_POST["Detalle"])); }
 if(isset($_POST["imagen"])) {$imagen=$_POST["imagen"] ;}else{ $imagen= "../WebMaq/NoImagen.png";}
 if(isset($_POST["Link"])) { $Link=$_POST["Link"]; }else { $Link= "";}
 
-if(isset($_POST["P1"])){ $P1=$_POST["P1"]; }
-if(isset($_POST["P2"])){ $P2=$_POST["P2"]; }
-if(isset($_POST["P3"])){ $P3=$_POST["P3"]; }
-if(isset($_POST["S1"])){ $S1=$_POST["S1"]; }
-if(isset($_POST["S2"])){ $S2=$_POST["S2"]; }
-if(isset($_POST["S3"])){ $S3=$_POST["S3"]; }
+if(isset($_POST["Codigo"])){ $Codigo=$_POST["Codigo"]; }
+if(isset($_POST["Art"])){ $Art=$_POST["Art"]; }
+if(isset($_POST["Precio"])){ $Precio=$_POST["Precio"]; }
+if(isset($_POST["cat"])){ $cat=$_POST["cat"]; }
+if(isset($_POST["SC"])){ $SC=$_POST["SC"]; }
+if(isset($_POST["imagen"])){ $imagen=$_POST["imagen"]; }
+
 if(isset($_POST["Cat"])){ $Cat=$_POST["Cat"]; }
 
  // *******************************  Maqeuesina ***************************** //
@@ -175,9 +176,10 @@ if ($Modo==15) { // ver Zonas
 	}
 }
 // ************************************  Fin Zonas *** ***********************  //
+
+/* * Ficha articulos  */
 if ($Modo==20) { // ver articulo X id
     $sql = "SELECT `idA`, `Codigo`, `Art`, `Precio`, `cat`, `SC`, `imagen` FROM `tarticulo` WHERE `idA`='" . $ID . "';";
-
     $segmento = mysqli_query($mysqli, $sql);
     while ($row = mysqli_fetch_array($segmento)) {
         $ID = $row['idA'];
@@ -190,8 +192,27 @@ if ($Modo==20) { // ver articulo X id
 
         print "$ID|$Codigo|$Art|$Precio|$cat|$SC|$imagen";
     }
-}
+}// ver articulo X id
 
+if ($Modo==21) { // ver articulo Borrar
+    $sql = "DELETE FROM `tarticulo` WHERE `idA`='" . $ID . "';";
+    //print $sql;
+    $segmento = mysqli_query($mysqli, $sql);
+    } // Borrar ARTICULO
+
+if ($Modo==22) { // Alta ARTICULO
+    if ( $ID < 1 ) { // Nuevo
+        $sql = "INSERT INTO `tarticulo`(`Codigo`, `Art`, `Precio`, `cat`, `SC`, `imagen`) VALUES ('" . $Codigo. "','". $Art . "','". $Precio . "','". $cat. "','". $SC. "','". $imagen ."');";
+    } else {// Actulizar
+
+        // `Precio`=[value-4],`cat`=[value-5],`SC`=[value-6],`imagen`=
+        $sql = "UPDATE `tarticulo` SET  `Codigo`='" . $Codigo ."',`Art`='".$Art ."',`Precio` ='". $Precio ."',`cat`='". $cat."',`SC`='". $SC."',`imagen`='". $imagen."' WHERE `idA`=" . $ID . " ;";
+    }
+    print $sql;
+    $segmento = mysqli_query($mysqli,$sql);
+}//  Fin  Alta ARTICULO
+
+/* ********* Fin ficha Articulos  ***************  */
 if ($Modo==100) { // Marcas OPTION
     $sql = "SELECT `idMarca`, `Marca` FROM `t_marca` ORDER BY `Marca`;";
     $segmento = mysqli_query($mysqli, $sql);

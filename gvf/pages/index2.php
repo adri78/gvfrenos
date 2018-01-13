@@ -31,6 +31,7 @@
             border: 2px solid black;
             box-sizing: border-box;
             padding: 10px;
+            margin: 1em;
             overflow: hidden;
         }
         #TDes, #Totros{
@@ -93,21 +94,21 @@ function pulsar(e) {
   <div class="row marco NV" id="fichas">
          <div>
         <div class="col-md-6">
-            <div class=" input-group col-md-6" style="padding-left: 2em;">
+            <div class=" input-group col-md-6">
                 <p class="input-group-addon">COD <span id="Artid"></span></p>
                 <input class="form-control" placeholder="Codigo" id="Cod" type="text">
             </div><br>
-            <div class=" input-group " style="padding-left: 2em;margin:0px">
+            <div class=" input-group " style="margin:0px">
                 <p class="input-group-addon">Articulo</p>
                 <input class="form-control" placeholder="Articulo" id="Art" type="text">
             </div><br>
-            <div class=" input-group col-md-11" style="padding-left: 2em;margin:0px">
+            <div class=" input-group col-md-11" style="margin:0px">
                 <p class="input-group-addon">Categoria</p>
                 <select name="Cat" id="Cat" class="form-control">
                     <option value=""> Todos</option>
                 </select>
             </div><br>
-            <div class=" input-group col-md-11" style="padding-left: 2em;margin:0px">
+            <div class=" input-group col-md-11" style="margin:0px">
                 <p class="input-group-addon">SubCate</p>
                 <select name="SCat" id="SCat" class="form-control">
                     <option value=""> Todos</option>
@@ -116,7 +117,7 @@ function pulsar(e) {
             <br>
             <div class="row">
                 <div class=" col-md-6">
-                    <div class=" input-group" style="padding-left: 2em;margin:0px">
+                    <div class=" input-group" style="margin:0px">
                         <p class="input-group-addon">Precio</p>
                         <input class="form-control" placeholder="Precio" id="Pre" type="text" style="text-align: right;">
                     </div>
@@ -125,9 +126,9 @@ function pulsar(e) {
 
 
                 <div  class="col-md-6">
-                    <a class="btn btn-success B">Grabar</a>
+                    <a class="btn btn-success B" onclick="AltaArt();">Grabar</a>
                     <a class="btn btn-info B" onclick="document.getElementById('fichas').style.display='none';">Salir</a>
-                    <a class="btn btn-danger B">Borrar</a>
+                    <a class="btn btn-danger B" onclick="BorrART();">Borrar</a>
                  </div>
             </div>
 
@@ -262,12 +263,10 @@ function pulsar(e) {
 <script>
     function OcultaTablas() {
         let x= document.querySelectorAll(".LArt");
-        for (i=0;i < x.length ; i++){
+        for (let i=0;i < x.length ; i++){
             x[i].style.display="none";
         }
     }
-
-
 
     '------  Script de articulos ------------ '
     function CargaCat() {
@@ -417,6 +416,70 @@ function LimpiART() {
             document.getElementById('Cod').focus();
            /* CargatSub();*/
         });
+    }
+
+    function BorrART() {
+        let id=document.getElementById('Artid').innerHTML;
+        let d={T:21,ID:id};
+        if(confirm("Seguro que va a Borrar este Articulo ?")){
+            $.post("cgi/CWeb.php", d, function(result) {
+                alert("Articulo Borrado");
+                document.getElementById('fichas').style.display="none";
+                location.reload();
+            });
+        }
+
+    }
+
+    function AltaArt(){
+       // `Codigo`, `Art`, `Precio`, `cat`, `SC`, `imagen`
+        let ID =document.getElementById('Artid').innerText;
+        let Codigo=document.getElementById('Cod').value;
+        let Art=document.getElementById('Art').value;
+      //  let Precio= document.getElementById('Pre').value ;
+        let Precio=parseFloat( document.getElementById('Pre').value || 0 ).toFixed(2);
+        let cat=document.getElementById('Cat').value;
+        let SC=document.getElementById('SCat').value;
+        let imagen=  document.getElementById('eImg').getAttribute("src");
+        let d ;
+
+        /* Logica */
+
+
+        if(Codigo.length < 3 ){
+                alert("Falta Codigo");
+            document.getElementById('Cod').focus();
+                return;
+        }
+        if(Art.length < 3 ){
+            alert("Falta Codigo");
+            document.getElementById('Art').focus();
+            return;
+        }
+        if (cat.length <1 ){
+            alert("Debe tener una categoria");
+            document.getElementById('Cat').focus();
+            return;
+        }
+         if( isNaN(Precio)){
+             Precio= 0.00;
+         }
+
+         if (SC < 1){
+            SC=0;
+         }
+        /* fin Logica */
+
+        d = {T: 22, ID: ID, Codigo: Codigo, Art: Art, Precio: Precio , cat: cat, SC: SC, imagen: imagen};
+        console.log(d);
+
+        $.post("cgi/CWeb.php", d, function (result) {
+            console.log(result);
+            alert("Grabado");
+            document.getElementById('fichas').style.display="none";
+            location.reload();
+        });
+
     }
 </script>
 
