@@ -182,7 +182,7 @@ function pulsar(e) {
             </div>
         </div>
       <div class="col-md-6"  style="text-align: center;" >
-          <img src="../none.png" alt="Sin Imagen" style="margin: 10px;" id="eImg">
+          <img src="../none.png" alt="Sin Imagen" style="margin: 10px; width: 100%;" id="eImg">
           <input type="file" id="Carga_Imagen" name="Carga_Imagen" accept="image/*" value="../../WebMaq/NoImagen.png">
       </div><!-- Fin col de la tabla -->
   </div>
@@ -311,7 +311,6 @@ function LimpiART() {
     document.getElementById('Pre').value="";
     document.getElementById('Cat').value="";
     document.getElementById('SCat').value="";
-
 
     document.getElementById('eImg').setAttribute("src","none.png");
     document.getElementById('Cod').focus();
